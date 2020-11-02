@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8-slim
 
 WORKDIR /
 
@@ -6,8 +6,4 @@ COPY ./requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
-COPY . /
-
-ENTRYPOINT ['python', '-m', 'miniproblem']
-
-CMD ['-u', 'miniproblem']
+CMD ['python3', '-m', 'miniproblem']

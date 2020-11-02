@@ -21,7 +21,7 @@ lint:
 build:
 	@docker build -t miniproblem:latest .
 	@echo "\n${BLUE}Running the app...${NC}\n"
-	@docker run -t miniproblem
+	@docker run -t miniproblem ls -l
 
 clean:
 	rm -rf .pytest_cache .coverage .pytest_cache coverage.xml
