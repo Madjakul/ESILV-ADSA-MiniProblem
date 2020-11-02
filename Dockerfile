@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.8
 
 WORKDIR /
 
@@ -8,6 +8,6 @@ RUN pip3 install -r requirements.txt
 
 COPY . /
 
-ENTRYPOINT ['python3', '-m', 'miniproblem']
+ENTRYPOINT ['python', '-m', 'miniproblem']
 
 CMD ['-u', 'miniproblem']
