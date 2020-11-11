@@ -7,11 +7,9 @@
 Before you begin, ensure you have met the following requirements:
 
 * Internet Connection
-* Python 3.6+
+* Python 3.8+
 
 ## Installing miniproblem
-
-If you want to use latest version, install from source. To install twitter-scraper from source, follow these steps:
 
 ## Using miniproblem
 
@@ -20,7 +18,9 @@ If you want to use latest version, install from source. To install twitter-scrap
 Thanks to the following people who have contributed to this project:
 
 ## Contact
-If you want to contact me you can reach me at
+If you want to contact me you can reach me at [@Madjakul]
 
 ## License
 This project uses the following license:
+
+[@Madjakul]: https://twitter.com/Madjakul
