@@ -10,4 +10,3 @@ def example_fixture():
     LOGGER.info('Setting Up Example Fixture...')
     yield
     LOGGER.info('Tearing Down Example Fixture...')
-

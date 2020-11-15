@@ -172,16 +172,3 @@ class AVLTree():
         while current.left.node is not None:
             current = current.left.node
         return current
-
-    def display(self):
-        lines, *_ = self.node._display_aux()
-        for line in lines:
-            print(line)
-
-    @staticmethod
-    def run():
-        scoreboard = AVLTree()
-        scoreboard.insert(Player("JDG", 0))
-        scoreboard.insert(Player("castex", 10))
-        scoreboard.insert(Player("ZeratoR", 5))
-        scoreboard.display()

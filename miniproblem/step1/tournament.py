@@ -19,10 +19,8 @@ class Tournament():
         players = [Player(player[0], player[1]) for player in list(zip(playerNames, [0 for _ in range(100)]))]
         self.ladder = AVLTree()
         [self.ladder.insert(player) for player in players] # All players are insterted in the database with a score of 0
-        [self.rounds(playerNames, roundNumber) for roundNumber in range(1, 10)] # We play the 10 rounds of 3 games
-        self.finals()
 
-    def rounds(self, playerNames, number):
+    def rounds(self, number):
         print(f"Round number {number} is being played:")
         print("First game...")
         firstScores = [random.randint(0, 12) for _ in range(100 - ((number - 1) * 10))]
@@ -61,4 +59,6 @@ class Tournament():
 
     @staticmethod
     def run():
-        test = Tournament()
+        step1 = Tournament()
+        [step1.rounds(roundNumber) for roundNumber in range(1, 10)] # We play the 10 rounds of 3 games
+        step1.finals()
