@@ -92,8 +92,8 @@ class BellmanFord():
 
 
 class FloydWarshall():
-    def __init__(self, graph):
-        file = open("assets/exit.txt","r+")
+    def __init__(self, graph, file):
+        file = open(file,"r+")
         file.truncate(0)
         file.close()
         self.inf = sys.maxsize
@@ -106,17 +106,15 @@ class FloydWarshall():
             for v in range(self.V):
                 self.graph[u][v] = self.inf if graph[u][v] == 0 else graph[u][v]
 
-    def floyd_warshall(self):
+    def floyd_warshall(self, file):
         self.dist = list(map(lambda i : list(map(lambda j : j, i)), self.graph))
         for k in range(self.V):
             for i in range(self.V):
                 for j in range(self.V):
                     self.dist[i][j] = min(self.dist[i][j], self.dist[i][k] + self.dist[k][j])
-            print(self.dist, "\n")
-            self.print_solution()
-            print(self.dist, "\n")
+            self.print_solution(file)
  
-    def print_solution(self):
+    def print_solution(self, file):
         temp = copy.deepcopy(self.dist)
         for i in range(len(temp)):
             for j in range(len(temp)):
@@ -124,12 +122,12 @@ class FloydWarshall():
                     temp[i][j] = "INF" if temp[i][j] == sys.maxsize else temp[i][j]
                 else:
                     temp[i][j] = 0
-        with open("assets/exit.txt", "a") as f:
+        with open(file, "w") as f:
             for i in range(len(temp)):
                 f.write(str(i + 1) + "\t" + str(temp[i]) + "\n")
             f.close()
 
     @staticmethod
-    def run(graph):
-        path = FloydWarshall(graph)
-        path.floyd_warshall()
+    def run(graph, file):
+        path = FloydWarshall(graph, file)
+        path.floyd_warshall(file)
