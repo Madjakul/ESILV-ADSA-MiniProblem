@@ -3,3 +3,4 @@
 from .step1.tournament import Tournament
 from .step2.impostors import GetImpostors
 from .step3.paths import Proofs
+from .step4.tasks import Tasks
