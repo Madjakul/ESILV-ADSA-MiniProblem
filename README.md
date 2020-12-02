@@ -55,7 +55,7 @@ Open your IDE terminal or the command prompt from the repository and run the fol
 python3 -m miniproblem [the step number you want]
 ```
 
-Sometimes the syntax ```python3`` isn't reconized,  you may want to give a try to
+Sometimes the syntax ```python3``` isn't reconized,  you may want to give a try to
 ```
 py -m miniproblem [the step number you want]
 ```
