@@ -5,6 +5,10 @@ import copy
 
 
 class Dijkstra():
+    """
+    Compute Dijkstra's algorithm from all sources taking an adjacency matrix
+    as input and writing all steps in assets/exit.txt
+    """
     def __init__(self, graph):
         file = open("assets/exit.txt","r+")
         file.truncate(0)
@@ -49,6 +53,10 @@ class Dijkstra():
 
 
 class BellmanFord():
+    """
+    Compute Bellman-Ford's algorithm from all sources taking an adjacency matrix
+    as input and writing all steps in assets/exit.txt
+    """
     def __init__(self, graph):
         file = open("assets/exit.txt","r+")
         file.truncate(0)
@@ -92,6 +100,10 @@ class BellmanFord():
 
 
 class FloydWarshall():
+    """
+    Compute Floy-Warshall's algorithm from all sources taking an adjacency matrix
+    as input and writing the final matrix in an exit file given as input.
+    """
     def __init__(self, graph, file):
         file = open(file,"r+")
         file.truncate(0)

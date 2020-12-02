@@ -9,6 +9,11 @@ from .database import AVLTree
 
 
 class Tournament():
+    """
+    Compute the tournament in the good order, removing automatically
+    And generating random points at each game.
+    Print eliminated players at each round and the final podium.
+    """
     def __init__(self):
         print("Welcome to ZeratoR's Among Us tournament ! \n\n")
         playerNames = []
@@ -62,3 +67,4 @@ class Tournament():
         step1 = Tournament()
         [step1.rounds(roundNumber) for roundNumber in range(1, 10)] # We play the 10 rounds of 3 games
         step1.finals()
+        print("\n")

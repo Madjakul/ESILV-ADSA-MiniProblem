@@ -6,7 +6,11 @@ class Graph():
         pass
     
     def hamilton(self, G, size, pt, path=[]):
-        print('hamilton called with pt={}, path={}'.format(pt, path))
+        """
+        Backtracking algorithm in order to find any hamiltonian
+        path in a graph.
+        G is the graph as an adjacency matrix.
+        """
         if pt not in set(path):
             path.append(pt)
             if len(path)==size:
@@ -16,7 +20,4 @@ class Graph():
                 candidate = self.hamilton(G, size, pt_next, res_path)
                 if candidate is not None:  # skip loop or dead end
                     return candidate
-            print('path {} is a dead end'.format(path))
-        else:
-            print('pt {} already in path {}'.format(pt, path))
         # loop or dead end, None is implicitly returned

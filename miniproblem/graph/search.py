@@ -10,6 +10,9 @@ class GetNeighbours():
         self.graph = graph
 
     def get_neigbours(self, node):
+        """
+        For a given node, return a list of all the other nodes it's connected to.
+        """
         neigbours = []
         [neigbours.append(str(j)) for j in range(self.V) if self.graph[node][j] != 0]
         return set(neigbours)
